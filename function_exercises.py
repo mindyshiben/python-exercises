@@ -7,9 +7,6 @@ def is_two(x):
     else:
         return False
 
-    
-
-
 # Define a function named is_vowel. It should return True if the passed string is a vowel, False otherwise
 
 def is_vowel(char):
@@ -17,8 +14,6 @@ def is_vowel(char):
         return True
     else:
         return False
-
-        
 
 # Define a function named is_consonant. It should return True if the passed string is a consonant, False otherwise.
 # Use your is_vowel function to accomplish this
@@ -104,3 +99,12 @@ def normalize_name(s):
 # Write a function named cumulative_sum that accepts a list of numbers and returns a list that is the cumulative sum of the numbers in the list.
 # cumulative_sum([1, 1, 1]) returns [1, 2, 3]
 # cumulative_sum([1, 2, 3, 4]) returns [1, 3, 6, 10]
+
+def cumulative_sum(list_of_nums):
+    csum = []
+    for x in range(len(list_of_nums)):
+        working_sum = sum(list_of_nums[:x + 1])
+        csum.append(working_sum)
+    return csum
+        
+cumulative_sum([1, 2, 3])
